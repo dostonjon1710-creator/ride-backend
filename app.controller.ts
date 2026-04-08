@@ -10,9 +10,14 @@ export class AppController {
     return 'DOSTON BACKEND WORKS 🚀';
   }
 
-  @Post()
-  createRide(@Body() body: any): string {
-    const { from, to } = body;
-    return `Ride ordered from ${from} to ${to} 🚗`;
-  }
+ @Post()
+createRide(@Body() body: any): any {
+  const { from, to } = body;
+
+  return {
+    status: 'ok',
+    from,
+    to,
+    price: Math.floor(Math.random() * 50) + 10,
+  };
 }
