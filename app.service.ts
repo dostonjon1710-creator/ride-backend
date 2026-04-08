@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  private rides = [];
+  private rides: any[] = [];
 
   createRide(from: string, to: string) {
     const ride = {

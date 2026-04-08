@@ -13,12 +13,11 @@ export class AppController {
   @Post()
   createRide(@Body() body: any): any {
     const { from, to } = body;
+    return this.appService.createRide(from, to);
+  }
 
-    return {
-      status: 'ok',
-      from,
-      to,
-      price: Math.floor(Math.random() * 50) + 10,
-    };
+  @Get('rides')
+  getAllRides() {
+    return this.appService.getRides();
   }
 }
