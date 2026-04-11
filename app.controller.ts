@@ -10,11 +10,11 @@ export class AppController {
     return 'DOSTON BACKEND WORKS 🚀';
   }
 
-  @Post()
-  createRide(@Body() body: any): any {
-    const { from, to } = body;
-    return this.appService.createRide(from, to);
-  }
+  @Post('rides')
+createRide(@Body() body: any): any {
+  const { from, to } = body;
+  return this.appService.createRide(from, to);
+}
 
   @Get('rides')
   getAllRides() {
