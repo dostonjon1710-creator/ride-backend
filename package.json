@@ -6,9 +6,8 @@
   "private": true,
   "license": "UNLICENSED",
 "scripts": {
-  "build": "nest build",
-  "start": "nest start",
-  "start:prod": "node dist/main.js"
+  "build": "npx nest build",
+  "start": "node dist/main.js"
 },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
